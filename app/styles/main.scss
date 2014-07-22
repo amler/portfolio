@@ -11,12 +11,102 @@ body {
 
 .header {
     background-color: #999;
-    height: 70px;
-    width: 100%;
-        margin: 0;
+    margin: 0;
+    overflow: hidden;
     padding: 0;
+    width: 100%;
+
     img {
         width: 80px;
+    }
+
+    ul {
+        float: right;
+        list-style-type: none;
+        
+        li {
+            margin: 5px 15px;
+            float: left;
+
+            a {
+                text-indent:-9999px;
+                display: block;
+                height: 50px;
+                width: 50px;
+            }
+            .twitter {
+                background: url('../images/social-media-icons/twitter-icon.png');
+                background-size: 50px 50px;
+                background-repeat: no-repeat;
+                opacity: 0.4;
+
+                &:hover {
+                    background: url('../images/social-media-icons/twitter-hover-icon.png');
+                    background-size: 50px 50px;
+                    opacity: 1;
+                    background-repeat: no-repeat;
+                    -webkit-transition: all 0.3s ease;
+                       -moz-transition: all 0.3s ease;
+                        -ms-transition: all 0.3s ease;
+                         -o-transition: all 0.3s ease;
+                            transition: all 0.3s ease;
+                }
+            }
+            .linkedin {
+                background: url('../images/social-media-icons/linkedin-icon.png');
+                background-size: 50px 50px;
+                background-repeat: no-repeat;
+                opacity: 0.4;
+                
+                &:hover {
+                    background: url('../images/social-media-icons/linkedin-hover-icon.png');
+                    background-size: 50px 50px;
+                    background-repeat: no-repeat;
+                    opacity: 1;
+                    -webkit-transition: all 0.3s ease;
+                       -moz-transition: all 0.3s ease;
+                        -ms-transition: all 0.3s ease;
+                         -o-transition: all 0.3s ease;
+                            transition: all 0.3s ease;
+                }
+            }
+            .dribbble {
+                background: url('../images/social-media-icons/dribbble-icon.png');
+                background-size: 50px 50px;
+                background-repeat: no-repeat;
+                opacity: 0.4;
+
+                &:hover {
+                    background: url('../images/social-media-icons/dribbble-hover-icon.png');
+                    background-size: 50px 50px;
+                    background-repeat: no-repeat;
+                    opacity: 1;
+                    -webkit-transition: all 0.3s ease;
+                       -moz-transition: all 0.3s ease;
+                        -ms-transition: all 0.3s ease;
+                         -o-transition: all 0.3s ease;
+                            transition: all 0.3s ease;
+                }
+            }
+            .github {
+                background: url('../images/social-media-icons/github-icon.png');
+                background-size: 50px 50px;
+                background-repeat: no-repeat;
+                opacity: 0.4;
+                
+                &:hover {
+                    background: url('../images/social-media-icons/github-hover-icon.png');
+                    background-size: 50px 50px;
+                    background-repeat: no-repeat;
+                    opacity: 1;
+                    -webkit-transition: all 0.3s ease;
+                       -moz-transition: all 0.3s ease;
+                        -ms-transition: all 0.3s ease;
+                         -o-transition: all 0.3s ease;
+                            transition: all 0.3s ease;
+                }
+            }
+        }
     }
 }
 
@@ -88,6 +178,13 @@ body {
 }
 
 @media only screen and (max-width : 480px) {
+    .header {
+        ul {
+            li {
+                margin: 5px;
+            }
+        }
+    }
     .menu {
         ul {
             float: none;
@@ -102,6 +199,7 @@ body {
             }
         }
     }
+
 
     .introduction {
         padding: 10px;
@@ -122,3 +220,9 @@ body {
 
 }
 
+@media only screen and (min-width : 700px) {
+
+}
+@media only screen and (min-width : 1051px) {
+
+}
