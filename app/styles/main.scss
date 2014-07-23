@@ -186,6 +186,14 @@ body {
     background-color: #C1E3E7;
 }
 
+
+    h2{
+        text-align: center;
+        background-color: #C1E3E7;
+        margin: 0;
+        padding: 70px;
+
+    }
 .portfolio-thumbnails {
     padding: 50px;
     overflow: hidden;
@@ -198,13 +206,32 @@ body {
         margin-right: 1%;
         padding: 10px;
         width: 30%;
-        
+
         h3 {
-            margin: 0;
+            margin: 10px 0 10px 0;
             padding: 0;
+            text-align: center;
         }
         img {
             width: 100%;
+        }
+
+        .button {
+            color: #333;
+            border: 1px solid blue;
+            display: inline-block;
+            float: left;
+            margin: 15px 15px 15px 34px;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            width: 30%;
+            
+            &:hover {
+                background-color: blue;
+                border: 1px solid #FFF;
+                color: #FFF;
+            }
         }
     }
 }
@@ -212,7 +239,19 @@ body {
 
 
 
-@media only screen and (max-width : 480px) {
+@media only screen and (max-width : 955px) {
+    .portfolio-thumbnails {
+        // padding: 40px;
+        .thumbnail {
+            background-color: blue;
+            width: 45%;
+            margin-bottom: 1%;
+        }
+    } 
+
+} // End of 955px query
+
+@media only screen and (max-width : 600px) {
     .header {
         ul {
             display: block;
@@ -249,20 +288,24 @@ body {
             }
         }
     }
-
-    .thumbnail {
-        width: 100%;
+    
+    .portfolio-thumbnails {
+        
+        .thumbnail {
+            background-color: red;
+            width: 99%;
+        }
     }
+} // End of 600 query
 
-} // End of 480 query
 
-@media only screen and (min-width : 481px) {
-
-}
-
-@media only screen and (min-width : 700px) {
-
-}
 @media only screen and (min-width : 1051px) {
+    .portfolio-thumbnails {
+        .thumbnail {
+            width: 30%;
+        }
+    }
+} // End of 1051 query
 
-}
+
+
