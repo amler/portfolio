@@ -1,5 +1,13 @@
 'use strict';
 
+$('.header').find('a').click(function(event) {
+    event.preventDefault();
+    var section = $(this).attr('href');
+    $('html, body').animate({
+        scrollTop: $(section).offset().top
+    });
+});
+
 var imageSlideshow = {
 	imageArray: [],
 	currentIndex: 0,
