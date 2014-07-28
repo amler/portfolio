@@ -8,6 +8,16 @@ $('.header').find('a').click(function(event) {
     });
 });
 
+$(window).scroll(function () {
+	if ($(this).scrollTop() > 450) {
+		$('#fixed-menu').slideDown();
+	} 
+	else {
+		$('#fixed-menu').hide();
+	}
+});
+
+
 var imageSlideshow = {
 	imageArray: [],
 	currentIndex: 0,

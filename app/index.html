@@ -1,4 +1,4 @@
-<!doctype html>
+<!doctype html> 
 <html class="no-js">
     <head>
         <meta charset="utf-8">
@@ -8,6 +8,7 @@
         <link rel="shortcut icon" href="/favicon.ico">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- build:css styles/vendor.css -->
+        <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700' rel='stylesheet' type='text/css'>
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
         <!-- bower:css -->
         <!-- endbower -->
@@ -22,86 +23,93 @@
         <![endif]-->
 
         <header class="header">
-            <img src="../images/amler-logo.png">
-            <ul>
-                <li><a href="#welcome">Home</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </header>
-        <section class="introduction">
-            <div class="intro-content">
+            <div class="intro">
+                <img class="logo" src="../images/amler-logo.png">
                 <h1>Heather Amler</h1>
-                <p>Howdy! I'm a Front End Developer and recent grad of The Iron Yard Academy. I'm ready to develop with you.</p>
+                <p> I want to build something awesome and develop with you.</p>
+                <ul>
+                    <li><a href="#web">Web</a></li>
+                    <li><a href="#design">Design</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </div>
-        </section>
-        <h2 id="portfolio">Web Development</h2>
+            <img class="heather" src="../images/heather-amler.png"/>
+        </header>
+        <div id="fixed-menu">
+            content here
+        </div>
+
+        <h2 id="web">Web Development</h2>
         <section class="portfolio-thumbnails">
             <div class="thumbnail">
                 <div class="img-holder">
                     <img src="../images/websites/CoolChat.png">
                 </div>
                 <h3>Cool Chat App</h3>
-                <a href="https://github.com/amler/coolchat" class="button">View GitHub</a>
-                <a href="http://amler.github.io/coolchat/" class="button">View Project</a>
+                <a href="https://github.com/amler/coolchat" class="button" target="_blank"  >View GitHub</a>
+                <a href="http://amler.github.io/coolchat/" class="button" target="_blank"   >View Project</a>
             </div>
             <div class="thumbnail">
                 <img src="../images/websites/surf-paddle.png">
                 <h3>Surf and Paddle</h3>
-                <a href="https://github.com/amler/day-2-homework" class="button">View GitHub</a>
-                <a href="http://amler.github.io/day-2-homework/" class="button">View Project</a>
+                <a href="https://github.com/amler/day-2-homework" class="button" target="_blank"    >View GitHub</a>
+                <a href="http://amler.github.io/day-2-homework/" class="button" target="_blank" >View Project</a>
             </div>
             <div class="thumbnail">
                 <img src="../images/websites/to-do.png">
                 <h3>To-Do App</h3>
-                <a href="https://github.com/amler/ToDo-Backbone-Proj1" class="button">View GitHub</a>
-                <a href="http://amler.github.io/ToDo-Backbone-Proj1/" class="button">View Project</a>
+                <a href="https://github.com/amler/ToDo-Backbone-Proj1" class="button" target="_blank"   >View GitHub</a>
+                <a href="http://amler.github.io/ToDo-Backbone-Proj1/" class="button" target="_blank"    >View Project</a>
             </div>
             <div class="thumbnail">
                 <img src="../images/websites/selfiesafari.png">
                 <h3>SelfieSafari</h3>
-                <a href="https://github.com/amler/simple-safari" class="button">View GitHub</a>
-                <a href="http://amler.github.io/simple-safari/" class="button">View Project</a>
+                <a href="https://github.com/amler/simple-safari" class="button" target="_blank" >View GitHub</a>
+                <a href="http://amler.github.io/simple-safari/" class="button" target="_blank"  >View Project</a>
             </div>
             <div class="thumbnail">
                 <img src="../images/websites/photo-gallery.png">
                 <h3>Photo Gallery</h3>
-                <a href="" class="button">View GitHub</a>
+                <a href="" class="button" target="_blank"   >View GitHub</a>
                 <!-- <a href="" class="button">View Project</a> -->
             </div>
         </section>
-        <h2>Design Experience</h2>
+        <h2 id="design">Design Experience</h2>
          <section class="design">
-            <div class="design-work" data-images='["../images/graphic-design/wine-a-rita.jpg", "../images/graphic-design/wine-a-rita-cards.jpg"]'>
-                <div class="img-holder">
+            <div class="design-work" data-images='["../images/graphic-design/wine-a-rita.jpg", "../images/graphic-design/wine-a-rita-cards.jpg", "../images/graphic-design/Designer-Elements-label.jpg", "../images/graphic-design/Millefiori-label.jpg", "../images/graphic-design/Carolina-Frit-label.jpg", "../images/graphic-design/Mardi-Gras-label.jpg"]'>
+                <div class="design-detail">
                     <img src="../images/graphic-design/wine-a-rita.jpg">
                 </div>
-                <h3 class="test">Wine-a-Rita</h3>
-                <p>Union Standard Wine-a-Rita packaging proposal for TJ Maxx</p>
-                
+                <h3 class="test">Packaging </h3>
             </div>
 
-            <div class="design-work" data-images='["../images/graphic-design/Designer-Elements-label.jpg", "../images/graphic-design/Millefiori-label.jpg", "../images/graphic-design/slumpys-businesscards.jpg", "../images/graphic-design/Carolina-Frit-label.jpg"]'>
-                <div class="img-holder">
-                    <img src="../images/graphic-design/Designer-Elements-label.jpg">
-                </div>
-                <h3>Print Media</h3>
-                <p>Armored Kiln Gear Advertising Campaign</p>
-                
-            </div>
-            <div class="design-work" data-images='["../images/graphic-design/yearbook-1.jpg", "../images/graphic-design/yearbook-2.jpg"]'>
-                <div class="img-holder">
+            <div class="design-work" data-images='["../images/graphic-design/yearbook-1.jpg", "../images/graphic-design/yearbook-2.jpg", "../images/graphic-design/yearbook-3.jpg"]'>
+                <div class="design-detail">
                     <img src="../images/graphic-design/yearbook-1.jpg">
                 </div>
-                <h3>SelfieSafari</h3>
-                
+                <h3>Yearbook </h3> 
             </div>
-            <div class="design-work" data-images='["../images/graphic-design/SS-935_Votive-Pendant.jpg", "../images/graphic-design/SS-935_Votive-Pendant_9.jpg", "../images/graphic-design/SS-905_Terrena.jpg", "../images/graphic-design/SS-905_Terrena_7.jpg"]'>
-                <div class="img-holder">
-                    <img src="../images/graphic-design/SS-935_Votive-Pendant.jpg">
+
+            <div class="design-work" data-images='["../images/graphic-design/qhe-logo.jpg", "../images/graphic-design/slumpfest.jpg", "../images/graphic-design/ha-logo.jpg", "../images/graphic-design/SelfiSafari-logo.png"]'>
+                <div class="design-detail">
+                    <img src="../images/graphic-design/qhe-logo.jpg">
                 </div>
-                <h3>Photo Gallery</h3>
+                <h3>Logos</h3> 
+            </div>
+
+            <div class="design-work" data-images='["../images/graphic-design/LVCollateral.jpg", "../images/graphic-design/slumpys-businesscards.jpg", "../images/graphic-design/catalog-1.jpg", "../images/graphic-design/layout-2.jpg"]'>
+                <div class="design-detail">
+                    <img src="../images/graphic-design/LVCollateral.jpg">
+                </div>
+                <h3>Branding </h3> 
+            </div>
+
+            <div class="design-work" data-images='["../images/graphic-design/SS-935_Votive-Pendant_9.jpg", "../images/graphic-design/SS-935_Votive-Pendant.jpg", "../images/graphic-design/SS-905_Terrena_7.jpg", "../images/graphic-design/SS-905_Terrena.jpg", "../images/graphic-design/SM-9220_Uluwatu.jpg", "../images/graphic-design/SM-9220_Uluwatu-sketch.jpg", "../images/graphic-design/SS-885_California-Drape-final.jpg", "../images/graphic-design/SS-885_California-Drape.jpg"]'>
+                <div class="design-detail">
+                    <img src="../images/graphic-design/SS-935_Votive-Pendant_9.jpg">
+                </div>
+                <h3>Product </h3>
             </div>
         </section>
 
@@ -109,26 +117,25 @@
         <div class="modal-wrap">
             <div id="modal">
                 <i class="fa fa-times fa-3x"></i>
-                <div class="detail-container">
+
                     <i class="fa fa-chevron-left fa-3x"></i>
                     <i class="fa fa-chevron-right fa-3x"></i>
                     <!--slideshow-->
                     <img src="" class="detail" />
-                </div>
+
             </div>
 
         </div>
 
-        <h2 id="about">More About Me</h2>
-        <section class="about">
+        <section id="about">
+            <h2>About</h2>
             <p>
-                I'm originally from Florida and have gradually moved north over the years before setting down roots in Charlotte, NC. I'm excellent at juggling multiple tasks, working under pressure, and love being apart of a collaborative team. My experience includes Marketing & Graphic Design, Customer Service, and managing Print Production. I just completed an intense front-end engineering course at the Iron Yard and have the passion to pursue my education.
+                Originally from Florida, I have gradually moved north over the years before setting down roots in Charlotte, NC. I'm excellent at juggling multiple tasks, working under pressure, and love being apart of a collaborative team. My experience includes Marketing & Graphic Design, Customer Service, and managing Print Production. I just completed an intense front-end engineering course at the Iron Yard and have the passion to pursue my education. 
             </p>
         </section>
-        <section id="contact" class="contact-me">
-            <p>
-                Let's meet for coffee!
-            </p>
+        <section id="contact">
+            <h2>Contact</h2>
+            <a href="mailto:heather@heatheramler.com.com?subject=We should talk">heather@heatheramler.com</a>
             <ul>
                 <li><a href="https://twitter.com/Amler" alt="twitter" class="twitter">Twitter</a></li>
                 <li><a href="http://www.linkedin.com/in/heatheramler" alt="LinkedIn" class="linkedin">LinkedIn</a></li>
