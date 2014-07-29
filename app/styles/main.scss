@@ -76,35 +76,35 @@ h2 {
 
 @-webkit-keyframes headerCycle { 
     0% {
-        background-color: #C3E2F7;
+        background-color: $lightblue;
     } 
     25% {
-        background-color: #7E7B7B;
+        background-color: #CC1716;
     } 
     50% {
-        background-color: rgba(76, 30, 0, 0.5);
+        background-color: #5FB5ED;
     } 
     75% {
-        background-color: #FFB4AE;
+        background-color: #00FFDC;
     } 
 }
 
 header {
-    background: #999 url('../images/heather-amler.png') 90% bottom no-repeat;
+    background: #fff url('../images/heather-amler.png') 90% bottom no-repeat;
     margin: 0;
     overflow: hidden;
     position: relative;
     width: 100%;
 
-    // animation-name: headerCycle; 
-    // animation-duration: 6s; 
-    // animation-direction: alternate; 
-    // animation-iteration-count: infinite; 
+    animation-name: headerCycle; 
+    animation-duration: 6s; 
+    animation-direction: alternate; 
+    animation-iteration-count: infinite; 
 
-    // -webkit-animation-name: headerCycle; 
-    // -webkit-animation-duration: 10s; 
-    // -webkit-animation-direction:alternate; 
-    // -webkit-animation-iteration-count:infinite;
+    -webkit-animation-name: headerCycle; 
+    -webkit-animation-duration: 10s; 
+    -webkit-animation-direction:alternate; 
+    -webkit-animation-iteration-count:infinite;
 
     .logo {
         float: left;
