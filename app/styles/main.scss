@@ -2,7 +2,7 @@
 // endbower
 @import "bourbon";
 
-$grey: #8D8C8C;
+$grey: #E9E9E9;
 $darkgrey: #333;
 $brown: #4C1E00;
 $lightblue: #9fcbe8;
@@ -35,7 +35,7 @@ h1 {
 
 h2 {
     background-color: $darkgrey;
-    color: #FDF8F8;
+    color: $lightblue;
     font-size: 2em;
     font-weight: normal;
     letter-spacing: 0.05em;
@@ -65,6 +65,13 @@ a {
     &:hover {
         background-color: $lightblue;
         color: #FFF;
+    }
+}
+
+#contact a {
+    border: none;
+    &:hover {
+        background-color: transparent;
     }
 }
 
@@ -113,14 +120,13 @@ header {
         float: left;
         margin: 150px 0 200px 10%;
         padding: 40px;
-        width: 500px;
-        /*
+        width: 500px; 
         -webkit-transition: margin 1s ease-in-out, width 1s ease-in-out;
            -moz-transition: margin 1s ease-in-out, width 1s ease-in-out;
             -ms-transition: margin 1s ease-in-out, width 1s ease-in-out;
              -o-transition: margin 1s ease-in-out, width 1s ease-in-out;
                 transition: margin 1s ease-in-out, width 1s ease-in-out;
-        */
+        
         ul {
             margin: 20px 0 0 0;
             padding: 0;
@@ -189,7 +195,7 @@ header {
     overflow: hidden;
 
     .thumbnail {
-        background-color: #E9E9E9;
+        background-color: $grey;
         float: left;
         margin: 0.2%;
         padding: 15px;
@@ -273,7 +279,7 @@ header {
     }
 
     @media only screen and (max-width : 600px) {
-        width: 85%;
+        width: 90%;
     }
         .fa-chevron-left,
         .fa-chevron-right {
@@ -317,32 +323,23 @@ header {
     }
 }
 
-/* 
 #about {
-    padding: 50px;
-    background: $lightblue;
 
-    h2 {
-        background: none;
-        padding: 0;
+    @media only screen and (max-width : 600px) {
+        padding: 5%;
     }
 
     p {
-        padding: 2% 5%;
+        line-height: 1.7em;
     }
 }
 
 #contact {
     background-color: #464646;
     color: white;
-    height: 400px;
-        text-align:center;
 
-    h2 {
-        background: none;
-    }
-
-     ul {    
+    ul { 
+        text-align: center;
         
         li {
             margin: 5px 15px 0 0;
@@ -405,5 +402,5 @@ header {
         }
     }
 }
-*/
+
   

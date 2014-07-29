@@ -1,6 +1,6 @@
 'use strict';
 
-/*
+
 $('.header').find('a').click(function(event) {
     event.preventDefault();
     var section = $(this).attr('href');
@@ -17,7 +17,7 @@ $(window).scroll(function () {
 		$('#fixed-menu').hide();
 	}
 });
-*/
+
 
 var imageSlideshow = {
 	imageArray: [],
