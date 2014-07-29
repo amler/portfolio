@@ -23,12 +23,12 @@ var imageSlideshow = {
 	imageArray: [],
 	currentIndex: 0,
 	hideModal: function() {
-		$('.modal-wrap').hide();
+		$('.modal-wrap, #modal').hide();
 	},
 	showModal: function() {
 		this.currentIndex = 0;
 		this.renderImages();
-		$('.modal-wrap').show();
+		$('.modal-wrap, #modal').show();
 	},
 	slideshowNext: function() {
 		this.currentIndex +=1;
@@ -74,7 +74,7 @@ var imageSlideshow = {
 
 $('.fa-chevron-right').on('click', function() { imageSlideshow.slideshowNext(); });
 $('.fa-chevron-left').on('click', function() { imageSlideshow.slideshowPrev(); });
-$('.fa-times').on('click', function() { imageSlideshow.hideModal(); });
+$('.fa-times, .modal-wrap').on('click', function() { imageSlideshow.hideModal(); });
 
 
 $('.design').click(function(event){

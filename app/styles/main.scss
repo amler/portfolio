@@ -218,7 +218,7 @@ header {
     }
 }
 
-@media only screen and (max-width : 751px) {
+@media screen and (max-width : 751px) {
     .thumbnails {
         padding: 20px;
 
@@ -251,11 +251,30 @@ header {
 
 #modal {
     background-color: #fff;
-    margin: 50px auto 0;
-    padding: 35px;
-    position: relative;
+    display: none;
+    padding: 3%;
+    position: fixed;
+    
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 50px;
     width: 50%;
 
+    -webkit-transition: width 0.5s ease-in-out;
+       -moz-transition: width 0.5s ease-in-out;
+        -ms-transition: width 0.5s ease-in-out;
+         -o-transition: width 0.5s ease-in-out;
+            transition: width 0.5s ease-in-out;
+    
+    @media only screen and (max-width : 1080px) {
+        width: 70%;
+    }
+
+    @media only screen and (max-width : 600px) {
+        width: 85%;
+    }
         .fa-chevron-left,
         .fa-chevron-right {
             background-color: $grey;
@@ -294,10 +313,9 @@ header {
         position: absolute;
         top: -20px;
         right: -15px;
-        text-shadow: -1px 1px 2px #333;
+        text-shadow: -1px 1px 1px #333;
     }
 }
-
 
 /* 
 #about {
