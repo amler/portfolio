@@ -45,8 +45,7 @@ h2 {
     text-shadow: -1px -1px #999;
 }
 
-.button,
-a {
+.button {
     border: 1px solid $lightblue;
     border-radius: 5px;
     color: inherit;
@@ -201,11 +200,11 @@ header {
         padding: 15px;
         width: 30%;
         text-align: center;
-        -webkit-transition: margin-bottom 0.5s ease-in-out, width 0.5s ease-in-out;
-           -moz-transition: margin-bottom 0.5s ease-in-out, width 0.5s ease-in-out;
-            -ms-transition: margin-bottom 0.5s ease-in-out, width 0.5s ease-in-out;
-             -o-transition: margin-bottom 0.5s ease-in-out, width 0.5s ease-in-out;
-                transition: margin-bottom 0.5s ease-in-out, width 0.5s ease-in-out;
+        // -webkit-transition: margin-bottom 0.5s ease-in-out, width 0.5s ease-in-out;
+        //    -moz-transition: margin-bottom 0.5s ease-in-out, width 0.5s ease-in-out;
+        //     -ms-transition: margin-bottom 0.5s ease-in-out, width 0.5s ease-in-out;
+        //      -o-transition: margin-bottom 0.5s ease-in-out, width 0.5s ease-in-out;
+        //         transition: margin-bottom 0.5s ease-in-out, width 0.5s ease-in-out;
         h3 {
             text-align: center;
         }
@@ -268,11 +267,11 @@ header {
     top: 50px;
     width: 50%;
 
-    -webkit-transition: width 0.5s ease-in-out;
-       -moz-transition: width 0.5s ease-in-out;
-        -ms-transition: width 0.5s ease-in-out;
-         -o-transition: width 0.5s ease-in-out;
-            transition: width 0.5s ease-in-out;
+    -webkit-transition: width 0.2s linear;
+       -moz-transition: width 0.2s linear;
+        -ms-transition: width 0.2s linear;
+         -o-transition: width 0.2s linear;
+            transition: width 0.2s linear;
     
     @media only screen and (max-width : 1080px) {
         width: 70%;
@@ -319,85 +318,79 @@ header {
         position: absolute;
         top: -20px;
         right: -15px;
-        text-shadow: -1px 1px 1px #333;
+        text-shadow: -1px 1px 1px $darkgrey;
     }
 }
 
 #about {
-
-    @media only screen and (max-width : 600px) {
-        padding: 5%;
+    padding: 50px;
+    @media screen and (max-width : 751px) {
+        padding: 20px;
     }
 
-    p {
+    .about-me {
+        background-color: $grey;
         line-height: 1.7em;
-    }
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 5%;
+    }   
 }
 
+
 #contact {
-    background-color: #464646;
-    color: white;
+    background-color: $grey;
+    height: 500px;
+
+    p {
+        margin: 50px auto 20px;
+        text-align: center;
+    }
+
+    a {
+        color: $brown;
+        text-decoration: none;
+        -webkit-transition: color 0.2s linear;
+           -moz-transition: color 0.2s linear;
+            -ms-transition: color 0.2s linear;
+             -o-transition: color 0.2s linear;
+                transition: color 0.2s linear;
+
+        &:hover {
+            color: $lightblue;
+        }
+    }
 
     ul { 
+        list-style-type: none;
+        padding: 0;
         text-align: center;
         
         li {
-            margin: 5px 15px 0 0;
             display: inline-block;
-            a {
-                text-indent:-9999px;
-                display: block;
-                height: 52px;
-                width: 52px;
-            }
-            .twitter {
-                background: url('../images/social-media-icons/twitter-icon.png');
-                
-                &:hover {
-                    background: url('../images/social-media-icons/twitter-hover-icon.png');
-                }
-            }
-            .linkedin {
-                background: url('../images/social-media-icons/linkedin-icon.png');
-                
-                &:hover {
-                    background: url('../images/social-media-icons/linkedin-hover-icon.png');
-                }
-            }
-            .dribbble {
-                background: url('../images/social-media-icons/dribbble-icon.png');
+            margin: 1%;
 
-                &:hover {
-                    background: url('../images/social-media-icons/dribbble-hover-icon.png');
-                }
-            }
-            .github {
-                background: url('../images/social-media-icons/github-icon.png');
-                
-                &:hover {
-                    background: url('../images/social-media-icons/github-hover-icon.png');
-                }
-            }
-            .dribbble, 
-            .github,
-            .linkedin,
-            .twitter {
-                background-size: 50px 50px;
-                background-repeat: no-repeat;
-                opacity: 0.4;
+            .fa {
+                color: $darkgrey;
+                opacity: 0.7;
+                -webkit-transition: opacity 0.2s linear, color 0.2s linear;
+                   -moz-transition: opacity 0.2s linear, color 0.2s linear;
+                    -ms-transition: opacity 0.2s linear, color 0.2s linear;
+                     -o-transition: opacity 0.2s linear, color 0.2s linear;
+                        transition: opacity 0.2s linear, color 0.2s linear;
 
-                &:hover {
-                    background-size: 50px 50px;
-                    opacity: 1;
-                    background-repeat: no-repeat;
-                    -webkit-filter: drop-shadow(1px 1px rgba(51, 51, 51, 0.50));
-                            filter: drop-shadow(1px 1px rgba(51, 51, 51, 0.50)); 
-                    -webkit-transition: all 0.3s ease;
-                       -moz-transition: all 0.3s ease;
-                        -ms-transition: all 0.3s ease;
-                         -o-transition: all 0.3s ease;
-                            transition: all 0.3s ease;
-                }
+            }
+            .fa-twitter:hover {
+                color: #1ab2e7;
+            }
+            .fa-linkedin:hover {
+                color: #1b86bc;
+            }
+            .fa-dribbble:hover {
+                color: #ea4c89;
+            }
+            .fa-github-alt:hover {
+                color: #0071be;
             }
         }
     }
