@@ -177,17 +177,35 @@ header {
     }
 }
 
-/*
+
 #fixed-menu {
-    height: 200px;
-    background-color: blue;
+    background-color: $lightblue;
+    border-radius: 0 0 0 5px;
     display: none;
     position: fixed;
     top: 0;
     right: 0;
-    // width: 100%;
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 15%;
+        text-align: center;
+
+        li {
+            margin: 30px 5px;
+
+            a {
+                color: $brown;
+                text-decoration: none;
+                &:hover {
+                    color: #FFF;
+                }
+            }
+        }
+    }
 }
-*/
+
 
 .thumbnails {
     padding: 50px;
@@ -322,7 +340,7 @@ header {
     }
 }
 
-#about {
+.about {
     padding: 50px;
     @media screen and (max-width : 751px) {
         padding: 20px;
