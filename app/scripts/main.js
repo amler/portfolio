@@ -71,12 +71,19 @@ var imageSlideshow = {
 	}
 };
 
-$('.fa-chevron-right').on('click', function() { imageSlideshow.slideshowNext(); });
-$('.fa-chevron-left').on('click', function() { imageSlideshow.slideshowPrev(); });
-$('.fa-times, .modal-wrap').on('click', function() { imageSlideshow.hideModal(); });
+$('.fa-chevron-right').on('click', function() {
+	imageSlideshow.slideshowNext();
+});
 
+$('.fa-chevron-left').on('click', function() {
+	imageSlideshow.slideshowPrev();
+});
 
-$('.design').click(function(event){
+$('.fa-times, .modal-wrap').on('click', function() {
+	imageSlideshow.hideModal();
+});
+
+$('.design').click(function(event) {
 	event.preventDefault();
 	var detailArray = $(this).data('images');
 	imageSlideshow.imageArray = detailArray;
