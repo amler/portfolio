@@ -89,20 +89,16 @@ $('.design').click(function(event) {
 	imageSlideshow.showModal();
 });
 
-var colorThemes = ['blue', 'red', 'orange', 'purple'];
+var colorThemes = ['blue', 'red', 'green', 'purple'];
 var count = 0;
 function changeColor() {
 	if (count < colorThemes.length - 1) {
 		count ++;
 		$('body').removeClass().addClass(colorThemes[count]);
-		// });
-	
 	} else {
 		count = 0;
 		console.log('ELSE', count);
 		$('body').removeClass().addClass(colorThemes[count]);
-		// $('body').removeClass().addClass(colorThemes[count]);
-		// $('body').addClass(colorThemes[0]);
 	}
 }
 setInterval(changeColor, 6000);

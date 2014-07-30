@@ -5,11 +5,11 @@
 $grey: #E9E9E9;
 $darkgrey: #333;
 $brown: #4C1E00;
-$lightblue: #9fcbe8;
+$lightblue: #9FCBE8;
 
 body {
     background: #FFF;
-    color: #4c1e00;
+    color: $brown;
     font-family: 'Ubuntu', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 1em;
     line-height: 1.4em;
@@ -151,6 +151,7 @@ header {
     position: fixed;
     right: 0;
     top: 0;
+    width: 56px;
 
     @include transition (background-color 0.5s ease-in-out);
 
@@ -178,7 +179,7 @@ header {
     @media screen and (max-width: 800px) {
         border-radius: 0;
         left: 0;
-
+        width: 100%;
         ul {
             padding: 3px;
 
@@ -219,6 +220,15 @@ header {
         .button {
             width: 120px;
         }
+        .design-detail {
+            cursor: pointer;
+            height: 200px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+            }
+        }
     }
     
     @media screen and (max-width: 1125px) {
@@ -226,25 +236,31 @@ header {
             width: 45%;
         }
     }
-    @media screen and (max-width : 751px) {
-        .thumbnails {
-            padding: 20px;
+    @media screen and (max-width : 755px) {
+        padding: 20px;
 
-            .thumbnail {
-                width: 95%;
-                margin-bottom: 1%;
-            }
+        .thumbnail {
+            width: 95%;
+            margin-bottom: 1%;
         }
     }
 }
 
-.design-detail {
-    cursor: pointer;
-    height: 200px;
-    overflow: hidden;
-
-    img {
-        width: 100%;
+.description {
+    min-height: 150px;
+    text-align: left;
+    p {
+        margin-bottom: 15px;
+    }
+    p:last-child {
+        
+        margin-bottom: 5px;
+    }
+    @media screen and (max-width: 1080px) {
+        min-height: 110px;
+    }
+    @media screen and (max-width: 751px) {
+        min-height: 95px;
     }
 }
 
@@ -384,24 +400,6 @@ header {
     }
 }
 
-.description {
-    min-height: 150px;
-    text-align: left;
-    p {
-        margin-bottom: 15px;
-    }
-    p:last-child {
-        
-        margin-bottom: 5px;
-    }
-    @media screen and (max-width: 1080px) {
-        min-height: 110px;
-    }
-    @media screen and (max-width: 751px) {
-        min-height: 95px;
-    }
-}
-
 @mixin set-theme($color) {
     h1, h2 {
         color: $color;
@@ -429,6 +427,6 @@ header {
 }
 
 body.blue { @include set-theme($lightblue); }
-body.red { @include set-theme(red); }
-body.orange { @include set-theme(orange); }
-body.purple { @include set-theme(purple); }
+body.red { @include set-theme(#FF6F54); }
+body.green { @include set-theme(#00FFDC); }
+body.purple { @include set-theme(#B661E8); }
