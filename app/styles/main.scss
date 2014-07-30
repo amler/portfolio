@@ -32,6 +32,7 @@ h1 {
     font-weight: normal;
     margin: 0;
     padding: 0 0 20px 0;
+    @include transition (color 0.5s ease-in-out);
 }
 
 h2 {
@@ -43,6 +44,7 @@ h2 {
     margin: 0;
     padding: 5%;
     text-align: center;
+    @include transition (color 0.5s ease-in-out);
 }
 
 .button {
@@ -57,7 +59,7 @@ h2 {
     text-decoration: none;
     width: 80px;
 
-    @include transition (color 0.2s linear, background-color 0.2s linear);
+    @include transition (color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear);
 
     &:hover {
         background-color: $lightblue;
@@ -71,6 +73,8 @@ header {
     overflow: hidden;
     position: relative;
     width: 100%;
+
+    @include transition (background-color 0.5s ease-in-out);
 
     .logo {
         float: left;
@@ -147,6 +151,8 @@ header {
     position: fixed;
     right: 0;
     top: 0;
+
+    @include transition (background-color 0.5s ease-in-out);
 
     ul {
         list-style-type: none;
@@ -283,7 +289,6 @@ header {
 
         &:hover {
             background-color: $darkgrey;
-            color: $lightblue;
         }
     }
 
@@ -313,6 +318,9 @@ header {
 
 .about {
     padding: 50px;
+
+    @include transition (background-color 0.5s ease-in-out);
+    
     @media screen and (max-width : 751px) {
         padding: 20px;
     }
@@ -394,27 +402,33 @@ header {
     }
 }
 
-
-
 @mixin set-theme($color) {
     h1, h2 {
         color: $color;
     }
-    header, #fixed-menu {
+    header, 
+    #fixed-menu,
+    .about {
         background-color: $color;
     }
     #contact a:hover {
         color: $color;
     }
     .button {
-        border: 1px solid $color;
+        border-color: $color;
         &:hover {
             background-color: $color;
         }
     }
+
+    #modal .fa-times,
+    #modal .fa-chevron-left,
+    #modal .fa-chevron-right {
+        color: $color;
+    }
 }
 
-body.blue { @include set-theme(blue); }
+body.blue { @include set-theme($lightblue); }
 body.red { @include set-theme(red); }
 body.orange { @include set-theme(orange); }
 body.purple { @include set-theme(purple); }
