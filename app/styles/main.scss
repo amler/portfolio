@@ -15,6 +15,7 @@ body {
     line-height: 1.4em;
     margin: 0;
     padding: 0;
+
     @media screen and (max-width: 1080px) {
         font-size: 0.8em;
     }
@@ -27,8 +28,8 @@ p {
 
 h1 {
     color: $lightblue;
-    font-weight: normal;
     font-size: 3em;
+    font-weight: normal;
     margin: 0;
     padding: 0 0 20px 0;
 }
@@ -42,7 +43,6 @@ h2 {
     margin: 0;
     padding: 5%;
     text-align: center;
-    text-shadow: -1px -1px #999;
 }
 
 .button {
@@ -56,55 +56,21 @@ h2 {
     text-align: center;
     text-decoration: none;
     width: 80px;
-    -webkit-transition: color 0.2s linear, background-color 0.2s linear;
-       -moz-transition: color 0.2s linear, background-color 0.2s linear;
-        -ms-transition: color 0.2s linear, background-color 0.2s linear;
-         -o-transition: color 0.2s linear, background-color 0.2s linear;
-            transition: color 0.2s linear, background-color 0.2s linear;
+
+    @include transition (color 0.2s linear, background-color 0.2s linear);
+
     &:hover {
         background-color: $lightblue;
         color: #FFF;
     }
 }
 
-#contact a {
-    border: none;
-    &:hover {
-        background-color: transparent;
-    }
-}
-
-@-webkit-keyframes headerCycle { 
-    0% {
-        background-color: $lightblue;
-    } 
-    25% {
-        background-color: #CC1716;
-    } 
-    50% {
-        background-color: #5FB5ED;
-    } 
-    75% {
-        background-color: #00FFDC;
-    } 
-}
-
 header {
-    background: #fff url('../images/heather-amler.png') 90% bottom no-repeat;
+    background: $lightblue url('../images/heather-amler.png') 90% bottom no-repeat;
     margin: 0;
     overflow: hidden;
     position: relative;
     width: 100%;
-
-    animation-name: headerCycle; 
-    animation-duration: 6s; 
-    animation-direction: alternate; 
-    animation-iteration-count: infinite; 
-
-    -webkit-animation-name: headerCycle; 
-    -webkit-animation-duration: 10s; 
-    -webkit-animation-direction:alternate; 
-    -webkit-animation-iteration-count:infinite;
 
     .logo {
         float: left;
@@ -119,12 +85,9 @@ header {
         float: left;
         margin: 150px 0 200px 10%;
         padding: 40px;
-        width: 500px; 
-        -webkit-transition: margin 1s ease-in-out, width 1s ease-in-out;
-           -moz-transition: margin 1s ease-in-out, width 1s ease-in-out;
-            -ms-transition: margin 1s ease-in-out, width 1s ease-in-out;
-             -o-transition: margin 1s ease-in-out, width 1s ease-in-out;
-                transition: margin 1s ease-in-out, width 1s ease-in-out;
+        width: 500px;
+
+        @include transition (margin 1s ease-in-out, width 1s ease-in-out);
         
         ul {
             margin: 20px 0 0 0;
@@ -182,8 +145,8 @@ header {
     border-radius: 0 0 0 5px;
     display: none;
     position: fixed;
-    top: 0;
     right: 0;
+    top: 0;
 
     ul {
         list-style-type: none;
@@ -197,6 +160,8 @@ header {
             a {
                 color: $brown;
                 text-decoration: none;
+                @include transition (color 0.2s linear);
+
                 &:hover {
                     color: #FFF;
                 }
@@ -232,16 +197,13 @@ header {
 
     .thumbnail {
         background-color: $grey;
+        border-radius: 5px;
         float: left;
         margin: 0.2%;
         padding: 15px;
         width: 30%;
         text-align: center;
-        // -webkit-transition: margin-bottom 0.5s ease-in-out, width 0.5s ease-in-out;
-        //    -moz-transition: margin-bottom 0.5s ease-in-out, width 0.5s ease-in-out;
-        //     -ms-transition: margin-bottom 0.5s ease-in-out, width 0.5s ease-in-out;
-        //      -o-transition: margin-bottom 0.5s ease-in-out, width 0.5s ease-in-out;
-        //         transition: margin-bottom 0.5s ease-in-out, width 0.5s ease-in-out;
+
         h3 {
             text-align: center;
         }
@@ -258,15 +220,14 @@ header {
             width: 45%;
         }
     }
-}
+    @media screen and (max-width : 751px) {
+        .thumbnails {
+            padding: 20px;
 
-@media screen and (max-width : 751px) {
-    .thumbnails {
-        padding: 20px;
-
-        .thumbnail {
-            width: 95%;
-            margin-bottom: 1%;
+            .thumbnail {
+                width: 95%;
+                margin-bottom: 1%;
+            }
         }
     }
 }
@@ -282,78 +243,70 @@ header {
 }
 
 .modal-wrap {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     background-color: rgba(51, 51, 51, 0.80);
     display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
 }
 
 #modal {
     background-color: #fff;
     display: none;
-    padding: 3%;
-    position: fixed;
-    
     margin-left: auto;
     margin-right: auto;
+    padding: 3%;
+    position: fixed;
     left: 0;
     right: 0;
     top: 50px;
     width: 50%;
-
-    -webkit-transition: width 0.2s linear;
-       -moz-transition: width 0.2s linear;
-        -ms-transition: width 0.2s linear;
-         -o-transition: width 0.2s linear;
-            transition: width 0.2s linear;
+    @include transition (width 0.2s linear);
     
     @media only screen and (max-width : 1080px) {
         width: 70%;
     }
-
     @media only screen and (max-width : 600px) {
         width: 90%;
     }
-        .fa-chevron-left,
-        .fa-chevron-right {
-            background-color: $grey;
-            color: $brown;
-            position: absolute;
-            top: 45%;
-            cursor: pointer;
-            z-index: 999;
+    .fa-chevron-left,
+    .fa-chevron-right {
+        background-color: $grey;
+        color: $brown;
+        cursor: pointer;
+        position: absolute;
+        top: 45%;
+        z-index: 999;
+        @include transition (background-color 0.2s ease, color 0.2s ease );
 
-            &:hover {
-                background-color: $darkgrey;
-                color: $lightblue;
-                -webkit-transition: all 0.2s ease;
-            }
+        &:hover {
+            background-color: $darkgrey;
+            color: $lightblue;
         }
+    }
 
-        .fa-chevron-left {
-            border-radius: 0 5px 5px 0;
-            left: 0;
-            padding: 10px 10px 10px 2px;
-        }
+    .fa-chevron-left {
+        border-radius: 0 5px 5px 0;
+        left: 0;
+        padding: 10px 10px 10px 2px;
+    }
 
-        .fa-chevron-right {
-            border-radius: 5px 0 0 5px;
-            right: 0;
-            padding: 10px 2px 10px 10px;
-        }
-
-        img {
-            width: 100%;
-        }
+    .fa-chevron-right {
+        border-radius: 5px 0 0 5px;
+        right: 0;
+        padding: 10px 2px 10px 10px;
+    }
+    img {
+        width: 100%;
+    }
     .fa-times {
         color: $lightblue;
         cursor: pointer;
         position: absolute;
-        top: -20px;
         right: -15px;
+        top: -20px;
         text-shadow: -1px 1px 1px $darkgrey;
     }
 }
@@ -366,6 +319,7 @@ header {
 
     .about-me {
         background-color: $grey;
+        border-radius: 5px;
         line-height: 1.7em;
         max-width: 800px;
         margin: 50px auto;
@@ -385,11 +339,7 @@ header {
     a {
         color: $brown;
         text-decoration: none;
-        -webkit-transition: color 0.2s linear;
-           -moz-transition: color 0.2s linear;
-            -ms-transition: color 0.2s linear;
-             -o-transition: color 0.2s linear;
-                transition: color 0.2s linear;
+        @include transition (color 0.2s linear);
 
         &:hover {
             color: $lightblue;
@@ -408,11 +358,7 @@ header {
             .fa {
                 color: $darkgrey;
                 opacity: 0.7;
-                -webkit-transition: opacity 0.2s linear, color 0.2s linear;
-                   -moz-transition: opacity 0.2s linear, color 0.2s linear;
-                    -ms-transition: opacity 0.2s linear, color 0.2s linear;
-                     -o-transition: opacity 0.2s linear, color 0.2s linear;
-                        transition: opacity 0.2s linear, color 0.2s linear;
+                @include transition (opacity 0.2s linear, color 0.2s linear);
             }
             .fa-twitter:hover {
                 color: #1ab2e7;
@@ -447,3 +393,28 @@ header {
         min-height: 95px;
     }
 }
+
+
+
+@mixin set-theme($color) {
+    h1, h2 {
+        color: $color;
+    }
+    header, #fixed-menu {
+        background-color: $color;
+    }
+    #contact a:hover {
+        color: $color;
+    }
+    .button {
+        border: 1px solid $color;
+        &:hover {
+            background-color: $color;
+        }
+    }
+}
+
+body.blue { @include set-theme(blue); }
+body.red { @include set-theme(red); }
+body.orange { @include set-theme(orange); }
+body.purple { @include set-theme(purple); }
