@@ -3,7 +3,6 @@
 $('header a, #fixed-menu a').click(function(event) {
     event.preventDefault();
     var section = $(this).attr('href');
-    console.log(section);
     $('html, body').animate({
         scrollTop: $(section).offset().top
     }, 700);
@@ -97,7 +96,6 @@ function changeColor() {
 		$('body').removeClass().addClass(colorThemes[count]);
 	} else {
 		count = 0;
-		console.log('ELSE', count);
 		$('body').removeClass().addClass(colorThemes[count]);
 	}
 }
